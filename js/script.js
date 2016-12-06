@@ -154,7 +154,7 @@ $(document).ready(function(){
       $btnSignUp.attr('disabled', 'disabled');
       $btnSignOut.removeAttr('disabled')
       // Add a callback that is triggered for each chat message.
-      dbChatRoom.limitToLast(10).on('child_added', function (snapshot) {
+      dbChatRoom.limitToLast(50).on('child_added', function (snapshot) {
         //GET DATA
         var data = snapshot.val();
         var username = data.name || "anonymous";
